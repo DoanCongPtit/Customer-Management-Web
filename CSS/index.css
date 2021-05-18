@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url("../Background/background-grad-e1532460412723.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#login_option {
+  margin-top: 10%;
+  text-align: center;
+  position: relative;
+}
+
+#login_option > h1 {
+  margin-bottom: 50px;
+}
+
+.login_block {
+  margin: 20px auto;
+  height: 50px;
+  width: 200px;
+  background-color: cornflowerblue;
+}
+
+.login_block > a {
+  color: cornsilk;
+  font-size: medium;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+}
+
+.login_block > a:hover {
+  color: cyan;
+}
