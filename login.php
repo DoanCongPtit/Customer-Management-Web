@@ -15,18 +15,15 @@
     session_start();
     include "./connection.php";
     if (isset($_GET["action"]) && $_GET["action"] == "login") {
-        $gmail = $_POST["gmail"];
+        $account = $_POST["account"];
         $password = $_POST["password"];
-        $sql = "SELECT * FROM users WHERE gmail = '" . $gmail . "' AND password = '" . $password . "'";
+        $sql = "SELECT * FROM admin WHERE account = '" . $account . "' AND password = '" . $password . "'";
         $result = mysqli_query($conn, $sql);
         $num_rows = mysqli_num_rows($result);
         if ($num_rows > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
                 $_SESSION["log_state"] = $row;
-                if ($row["roleid"] == 1)
-                    header("Location: ./admin_dashboard.php");
-                else
-                    header("Location: ./ok.php");
+                header("Location: ./admin/admin_dashboard.php"); 
             }
         } else {
             header("Location: ./login.php");
@@ -41,7 +38,7 @@
                 </div>
                 <h2 class="text-center">Login</h2>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="gmail" placeholder="Gmail" required="required">
+                    <input type="text" class="form-control" name="account" placeholder="account" required="required">
                 </div>
                 <div class="form-group">
                     <input type="password" class="form-control" name="password" placeholder="Password" required="required">

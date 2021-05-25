@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include "./connection.php" ?>
+    <p>hahahah</p>
 </body>
 </html>
