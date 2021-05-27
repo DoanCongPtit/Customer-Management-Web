@@ -11,7 +11,7 @@
 <body>
     <?php
     session_start();
-    $msg=" ";
+    $msg = " ";
     if (isset($_SESSION["log_state"])) {
         include "../file_upload.php";
         include "../connection.php";
@@ -25,14 +25,13 @@
             $createdDate = date("Y-m-d");
             $pathOfFile = getFileUploaded();
             $sql = "INSERT INTO users(full_name, gmail, password,
-             created_at, status, date_of_birth,
-              phone_number, address, image_path) VALUES ('$fullName','$gmail','$password','$createdDate',
-            '1','$dateOfBirth','$phoneNumber','$address','$pathOfFile')";
-            
+             created_at,  date_of_birth,
+              phone_number, address, image_path) VALUES ('$fullName','$gmail','$password','$createdDate','$dateOfBirth','$phoneNumber','$address','$pathOfFile')";
+
             if (mysqli_query($conn, $sql)) {
-                $msg='<div class="alert alert-success">Thêm thành công</div>';
+                $msg = '<div class="alert alert-success">Thêm thành công</div>';
             } else {
-                $msg='<div class="alert alert-danger">Xảy ra lỗi</div>';
+                $msg = '<div class="alert alert-danger">Xảy ra lỗi</div>';
             }
             mysqli_close($conn);
         } ?>

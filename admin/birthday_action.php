@@ -28,14 +28,3 @@ if (isset($_GET["action"]) && $_GET["action"] == "send_mail") {
     }
     Header("Location: ./admin_dashboard.php");
 }
-include "../connection.php";
-$sql = "SELECT * FROM users";
-$result = mysqli_query($conn, $sql);
-$date = date("Y-m-d");
-$birthday = "";
-while ($row = mysqli_fetch_assoc($result)) {
-    if ($row["date_of_birth"] == $date) {
-        $birthday = "Sinh nhật khách hàng";
-    }
-}
-?>

@@ -14,7 +14,8 @@
 <body>
     <div class="container" id="login_option">
         <h1>TRANG ĐĂNG NHẬP</h1>
-        <div class="login_block"><a href="login.php">CLICK HERE</a></div>
+        <div class="login_block"><a href="./admin/login.php">ADMIN</a></div>
+        <div class="login_block"><a href="./client/login.php">CLIENT</a></div>
     </div>
     
     <!-- jQuery library -->

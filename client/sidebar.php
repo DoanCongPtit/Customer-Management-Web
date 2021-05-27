@@ -3,22 +3,17 @@
 
 <div class="sidebar-container">
   <div class="sidebar-logo">
-    <?= $_SESSION["log_state"]["account"] ?>
+    <?= $_SESSION["log_state"]["full_name"] ?>
   </div>
   <ul class="sidebar-navigation">
     <li>
-      <a href="./admin_dashboard.php">
+      <a href="./client_dashboard.php">
         Trang chủ
       </a>
     </li>
     <li>
-      <a href="./search.php">
-        Tìm kiếm
-      </a>
-    </li>
-    <li>
-      <a href="./register-client.php">
-        Thêm khách hàng
+      <a href="./edit.php">
+        Cập nhật
       </a>
     </li>
     <li>
