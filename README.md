@@ -12,5 +12,5 @@ A management website
 # Features
 - Create, Delete, List, Update and Search function </br>
 - Chart</br>
-- Send mail to users on birthday</br>
+- Send mail to users on their birthday</br>
 
