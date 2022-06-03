@@ -1,4 +1,4 @@
-# CRUD-Web </br>
+# Customer-Management-Web </br>
 A management website
 # Tech stack 
 - PHP </br>
